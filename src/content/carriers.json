@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "carriers": [
+    {
+      "id": "jio",
+      "name": "Reliance Jio",
+      "ussd": {
+        "status": "UNVERIFIED",
+        "verified_on": null,
+        "source": "Initial catalog; requires 2G/GSM cellular circuit-switched fallback or native USSD support"
+      },
+      "notes": "Jio is pure 4G/5G VoLTE. USSD (*99#) support depends on IMS USSD protocol implementation on the specific tower/device."
+    },
+    {
+      "id": "airtel",
+      "name": "Bharti Airtel",
+      "ussd": {
+        "status": "UNVERIFIED",
+        "verified_on": null,
+        "source": "NPCI NUUP GSM operator partner list"
+      },
+      "notes": "Standard GSM *99# USSD gateway supported nationwide."
+    },
+    {
+      "id": "vi",
+      "name": "Vodafone Idea (Vi)",
+      "ussd": {
+        "status": "UNVERIFIED",
+        "verified_on": null,
+        "source": "NPCI NUUP GSM operator partner list"
+      },
+      "notes": "Standard GSM *99# USSD gateway supported nationwide."
+    },
+    {
+      "id": "bsnl",
+      "name": "BSNL",
+      "ussd": {
+        "status": "UNVERIFIED",
+        "verified_on": null,
+        "source": "NPCI NUUP GSM operator partner list"
+      },
+      "notes": "Government telecom provider with broad 2G/3G USSD coverage in rural regions."
+    },
+    {
+      "id": "mtnl",
+      "name": "MTNL",
+      "ussd": {
+        "status": "UNVERIFIED",
+        "verified_on": null,
+        "source": "NPCI NUUP GSM operator partner list"
+      },
+      "notes": "Available in Delhi and Mumbai telecom circles."
+    }
+  ]
+}

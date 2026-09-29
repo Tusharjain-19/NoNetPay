@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 1,
+  "banks": [
+    {
+      "id": "sbi",
+      "name": "State Bank of India",
+      "ussd": {
+        "status": "UNVERIFIED",
+        "verified_on": null,
+        "source": "NPCI NUUP *99# Directory",
+        "shortcutFormat": "*99*41#",
+        "menuSteps": [
+          "Dial *99# (or direct shortcut *99*41#)",
+          "Reply 1 for 'Send Money'",
+          "Reply 3 for 'UPI ID'",
+          "Paste or enter the payee UPI ID",
+          "Enter amount in Rupees",
+          "Enter remark/note (or 1 to skip)",
+          "Enter your 6-digit UPI PIN to authenticate"
+        ]
+      },
+      "balanceSteps": [
+        "Dial *99#",
+        "Reply 3 for 'Check Balance'",
+        "Select bank account if multiple",
+        "Enter your UPI PIN",
+        "View and record balance displayed on screen"
+      ],
+      "linkGuide": [
+        "Ensure your mobile SIM is the one registered with SBI",
+        "Dial *99# from your phone dialer",
+        "Enter 'SBI' or IFSC letters 'SBIN' when prompted",
+        "Select your primary savings account",
+        "Enter last 6 digits of debit card and validity date (MM/YY)",
+        "Set or confirm your 6-digit UPI PIN"
+      ]
+    },
+    {
+      "id": "hdfc",
+      "name": "HDFC Bank",
+      "ussd": {
+        "status": "UNVERIFIED",
+        "verified_on": null,
+        "source": "NPCI NUUP *99# Directory",
+        "shortcutFormat": "*99*42#",
+        "menuSteps": [
+          "Dial *99# (or direct shortcut *99*42#)",
+          "Reply 1 for 'Send Money'",
+          "Reply 3 for 'UPI ID'",
+          "Paste or enter payee UPI ID",
+          "Enter amount in Rupees",
+          "Enter remarks / note",
+          "Enter your 4-digit UPI PIN"
+        ]
+      },
+      "balanceSteps": [
+        "Dial *99#",
+        "Reply 3 for 'Check Balance'",
+        "Enter your 4-digit UPI PIN",
+        "View balance on USSD flash screen"
+      ],
+      "linkGuide": [
+        "Dial *99# using your registered HDFC mobile number",
+        "Enter 'HDFC' when asked for bank code",
+        "Select your account",
+        "Provide debit card last 6 digits and expiry MMYY",
+        "Set your 4-digit UPI PIN"
+      ]
+    },
+    {
+      "id": "icici",
+      "name": "ICICI Bank",
+      "ussd": {
+        "status": "UNVERIFIED",
+        "verified_on": null,
+        "source": "NPCI NUUP *99# Directory",
+        "shortcutFormat": "*99*43#",
+        "menuSteps": [
+          "Dial *99# (or shortcut *99*43#)",
+          "Reply 1 for 'Send Money'",
+          "Reply 3 for 'UPI ID'",
+          "Paste or enter the payee UPI ID",
+          "Enter amount in Rupees",
+          "Enter remarks (optional)",
+          "Enter your 4-digit UPI PIN"
+        ]
+      },
+      "balanceSteps": [
+        "Dial *99#",
+        "Reply 3 for 'Check Balance'",
+        "Enter your UPI PIN",
+        "Check account balance display"
+      ],
+      "linkGuide": [
+        "Dial *99# from your ICICI registered SIM",
+        "Enter 'ICIC' as 4-character IFSC code",
+        "Select your ICICI account",
+        "Validate debit card details",
+        "Set 4-digit UPI PIN"
+      ]
+    },
+    {
+      "id": "pnb",
+      "name": "Punjab National Bank",
+      "ussd": {
+        "status": "UNVERIFIED",
+        "verified_on": null,
+        "source": "NPCI NUUP *99# Directory",
+        "shortcutFormat": "*99*45#",
+        "menuSteps": [
+          "Dial *99# (or *99*45#)",
+          "Reply 1 for 'Send Money'",
+          "Reply 3 for 'UPI ID'",
+          "Enter payee UPI ID",
+          "Enter amount in Rupees",
+          "Enter your 6-digit UPI PIN"
+        ]
+      },
+      "balanceSteps": [
+        "Dial *99#",
+        "Reply 3 for 'Check Balance'",
+        "Enter your 6-digit UPI PIN",
+        "Note down the balance"
+      ],
+      "linkGuide": [
+        "Dial *99# from your PNB registered SIM",
+        "Enter 'PNB' or 'PUNB'",
+        "Confirm your account",
+        "Enter last 6 digits of debit card and MMYY",
+        "Set 6-digit UPI PIN"
+      ]
+    },
+    {
+      "id": "bob",
+      "name": "Bank of Baroda",
+      "ussd": {
+        "status": "UNVERIFIED",
+        "verified_on": null,
+        "source": "NPCI NUUP *99# Directory",
+        "shortcutFormat": "*99*44#",
+        "menuSteps": [
+          "Dial *99# (or *99*44#)",
+          "Reply 1 for 'Send Money'",
+          "Reply 3 for 'UPI ID'",
+          "Enter payee UPI ID",
+          "Enter amount in Rupees",
+          "Enter your 4-digit UPI PIN"
+        ]
+      },
+      "balanceSteps": [
+        "Dial *99#",
+        "Reply 3 for 'Check Balance'",
+        "Enter your UPI PIN",
+        "View balance"
+      ],
+      "linkGuide": [
+        "Dial *99# from registered SIM",
+        "Enter 'BOB' or 'BARB'",
+        "Select your account",
+        "Verify debit card and set PIN"
+      ]
+    },
+    {
+      "id": "axis",
+      "name": "Axis Bank",
+      "ussd": {
+        "status": "UNVERIFIED",
+        "verified_on": null,
+        "source": "NPCI NUUP *99# Directory",
+        "shortcutFormat": "*99*46#",
+        "menuSteps": [
+          "Dial *99# (or *99*46#)",
+          "Reply 1 for 'Send Money'",
+          "Reply 3 for 'UPI ID'",
+          "Enter payee UPI ID",
+          "Enter amount",
+          "Enter UPI PIN"
+        ]
+      },
+      "balanceSteps": [
+        "Dial *99#",
+        "Reply 3 for 'Check Balance'",
+        "Enter UPI PIN",
+        "Read balance"
+      ],
+      "linkGuide": [
+        "Dial *99# from Axis registered mobile number",
+        "Enter 'UTIB' or 'AXIS'",
+        "Link account and set PIN"
+      ]
+    },
+    {
+      "id": "canara",
+      "name": "Canara Bank",
+      "ussd": {
+        "status": "UNVERIFIED",
+        "verified_on": null,
+        "source": "NPCI NUUP *99# Directory",
+        "shortcutFormat": "*99*47#",
+        "menuSteps": [
+          "Dial *99# (or *99*47#)",
+          "Reply 1 for 'Send Money'",
+          "Reply 3 for 'UPI ID'",
+          "Enter payee UPI ID",
+          "Enter amount",
+          "Enter UPI PIN"
+        ]
+      },
+      "balanceSteps": [
+        "Dial *99#",
+        "Reply 3 for 'Check Balance'",
+        "Enter UPI PIN",
+        "Read balance"
+      ],
+      "linkGuide": [
+        "Dial *99# from registered SIM",
+        "Enter 'CNRB' or 'CANARA'",
+        "Select bank account and set PIN"
+      ]
+    },
+    {
+      "id": "union",
+      "name": "Union Bank of India",
+      "ussd": {
+        "status": "UNVERIFIED",
+        "verified_on": null,
+        "source": "NPCI NUUP *99# Directory",
+        "shortcutFormat": "*99*48#",
+        "menuSteps": [
+          "Dial *99#",
+          "Reply 1 for 'Send Money'",
+          "Reply 3 for 'UPI ID'",
+          "Enter payee UPI ID",
+          "Enter amount",
+          "Enter UPI PIN"
+        ]
+      },
+      "balanceSteps": [
+        "Dial *99#",
+        "Reply 3 for 'Check Balance'",
+        "Enter UPI PIN",
+        "Read balance"
+      ],
+      "linkGuide": [
+        "Dial *99# from registered SIM",
+        "Enter 'UBIN' or 'UNION'",
+        "Link account and set PIN"
+      ]
+    },
+    {
+      "id": "kotak",
+      "name": "Kotak Mahindra Bank",
+      "ussd": {
+        "status": "UNVERIFIED",
+        "verified_on": null,
+        "source": "NPCI NUUP *99# Directory",
+        "shortcutFormat": "*99*50#",
+        "menuSteps": [
+          "Dial *99#",
+          "Reply 1 for 'Send Money'",
+          "Reply 3 for 'UPI ID'",
+          "Enter payee UPI ID",
+          "Enter amount",
+          "Enter UPI PIN"
+        ]
+      },
+      "balanceSteps": [
+        "Dial *99#",
+        "Reply 3 for 'Check Balance'",
+        "Enter UPI PIN",
+        "Read balance"
+      ],
+      "linkGuide": [
+        "Dial *99# from Kotak registered number",
+        "Enter 'KKBK' or 'KOTAK'",
+        "Set 6-digit UPI PIN"
+      ]
+    },
+    {
+      "id": "indusind",
+      "name": "IndusInd Bank",
+      "ussd": {
+        "status": "UNVERIFIED",
+        "verified_on": null,
+        "source": "NPCI NUUP *99# Directory",
+        "shortcutFormat": "*99*69#",
+        "menuSteps": [
+          "Dial *99#",
+          "Reply 1 for 'Send Money'",
+          "Reply 3 for 'UPI ID'",
+          "Enter payee UPI ID",
+          "Enter amount",
+          "Enter UPI PIN"
+        ]
+      },
+      "balanceSteps": [
+        "Dial *99#",
+        "Reply 3 for 'Check Balance'",
+        "Enter UPI PIN",
+        "Read balance"
+      ],
+      "linkGuide": [
+        "Dial *99# from registered mobile",
+        "Enter 'INDB' or 'INDUS'",
+        "Set UPI PIN"
+      ]
+    }
+  ]
+}

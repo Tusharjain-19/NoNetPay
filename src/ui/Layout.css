@@ -1,0 +1,181 @@
+/* ===== Sovereign Layout & FloatingDockNavigation ===== */
+
+/* Header Action Buttons */
+.header-install-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #0F172A;
+  color: #FFFFFF;
+  border: 1px solid #1E293B;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.header-install-btn:hover {
+  background: #1E293B;
+}
+
+.header-offline-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #ECFDF5;
+  color: #065F46;
+  border: 1px solid #A7F3D0;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.header-offline-btn:hover {
+  background: #D1FAE5;
+}
+
+.lang-toggle {
+  background: #F1F5F9;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  width: 34px;
+  height: 34px;
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.lang-toggle__text {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+@media (max-width: 440px) {
+  .header-offline-btn span {
+    display: none;
+  }
+  .header-install-btn span {
+    display: none;
+  }
+  .header-install-btn {
+    padding: 6px 8px;
+  }
+  .header-offline-btn {
+    padding: 6px 8px;
+  }
+}
+
+/* FloatingDockNavigation — Sovereign Specification */
+.floating-dock-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--app-max-width, 640px);
+  height: 64px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid #E2E8F0;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto 1fr 1fr;
+  align-items: center;
+  padding: 0 8px;
+  z-index: var(--z-sticky, 200);
+  box-shadow: 0 -4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.floating-dock__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  height: 100%;
+  color: #64748B;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.15s ease;
+  user-select: none;
+}
+
+.floating-dock__item:hover {
+  color: #0F172A;
+}
+
+.floating-dock__item--active {
+  color: #0F172A;
+  font-weight: 700;
+}
+
+/* Central Elevated Scan Trigger */
+.floating-dock__center-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6px;
+  position: relative;
+  top: -12px;
+}
+
+.floating-dock__scan-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  background: #0F172A;
+  color: #FFFFFF;
+  border-radius: 9999px;
+  padding: 10px 22px;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.floating-dock__scan-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.3);
+}
+
+.floating-dock__scan-btn:active {
+  transform: translateY(0);
+}
+
+.floating-dock__scan-btn--active {
+  border-color: #10B981;
+  box-shadow: 0 0 0 2px #10B981, 0 6px 16px rgba(15, 23, 42, 0.22);
+}
+
+.floating-dock__scan-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+}
+
+/* Toast Notifications */
+.toast--success {
+  background: #065F46;
+  color: #FFFFFF;
+}
+
+.toast--error {
+  background: #991B1B;
+  color: #FFFFFF;
+}
+
+.toast--info {
+  background: #0F172A;
+  color: #FFFFFF;
+}

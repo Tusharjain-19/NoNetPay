@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "success": [
+    {
+      "id": "succ_paid",
+      "pattern": "(payment\\s+(?:of\\s+)?(?:rs\\.?|inr)?\\s*\\d+(?:\\.\\d{1,2})?\\s+(?:to\\s+.*?)?(?:successful|completed|done)|transferred\\s+successfully|txn\\s+successful|sent\\s+(?:rs\\.?|inr)?\\s*\\d+)",
+      "description": "Positive confirmation that payment or transfer completed successfully."
+    },
+    {
+      "id": "succ_ref",
+      "pattern": "(ref(?:erence)?\\s*(?:no|id|num)?[:\\s]*\\d{6,}|upi\\s*ref[:\\s]*\\d{6,})",
+      "description": "USSD response includes an NPCI reference/RR number indicating successful processing."
+    }
+  ],
+  "failure": [
+    {
+      "id": "fail_wrong_pin",
+      "pattern": "(incorrect\\s+(?:upi\\s+)?pin|wrong\\s+(?:upi\\s+)?pin|invalid\\s+upi\\s*pin|pin\\s+mismatch|exceeded\\s+pin\\s+limit)",
+      "humanKey": "wrong_pin",
+      "humanReason": "Incorrect UPI PIN entered in the dialer. Your bank rejected the transaction."
+    },
+    {
+      "id": "fail_insufficient_funds",
+      "pattern": "(insufficient\\s+funds?|low\\s+balance|balance\\s+low|not\\s+enough\\s+balance)",
+      "humanKey": "insufficient_funds",
+      "humanReason": "Insufficient funds in your bank account."
+    },
+    {
+      "id": "fail_bank_down",
+      "pattern": "(bank\\s+server\\s+down|bank\\s+unavailable|technical\\s+issue|unable\\s+to\\s+reach\\s+bank|cbs\\s+down|remitter\\s+bank\\s+decline)",
+      "humanKey": "bank_down",
+      "humanReason": "Your bank's UPI server is currently down or unreachable."
+    },
+    {
+      "id": "fail_invalid_vpa",
+      "pattern": "(invalid\\s+(?:upi\\s+id|vpa)|beneficiary\\s+not\\s+found|vpa\\s+does\\s+not\\s+exist|payee\\s+not\\s+registered)",
+      "humanKey": "invalid_vpa",
+      "humanReason": "The recipient UPI ID was not found or is invalid."
+    },
+    {
+      "id": "fail_session_timeout",
+      "pattern": "(session\\s+(?:timed?\\s*out|expired)|connection\\s+problem|mmi\\s+complete|invalid\\s+mmi\\s+code)",
+      "humanKey": "session_timeout",
+      "humanReason": "The USSD session timed out or network connection interrupted."
+    },
+    {
+      "id": "fail_limit_exceeded",
+      "pattern": "(limit\\s+exceeded|per\\s+day\\s+limit|amount\\s+exceeds|max(?:imum)?\\s+limit)",
+      "humanKey": "limit_exceeded",
+      "humanReason": "Transaction exceeds *99# USSD daily payment limit (typically ₹5,000 per transaction)."
+    },
+    {
+      "id": "fail_user_cancelled",
+      "pattern": "(cancelled\\s+by\\s+user|transaction\\s+cancelled|aborted)",
+      "humanKey": "user_cancelled",
+      "humanReason": "Transaction was cancelled in the dialer."
+    }
+  ]
+}

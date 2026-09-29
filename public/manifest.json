@@ -1,0 +1,19 @@
+{
+  "short_name": "NoNetPay",
+  "name": "NoNetPay — Offline UPI Payments",
+  "description": "Pay without internet connection using USSD *99# and offline smart routing.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/app",
+  "background_color": "#F8FAFC",
+  "theme_color": "#0F766E",
+  "display": "standalone",
+  "orientation": "portrait",
+  "categories": ["finance", "utilities"]
+}

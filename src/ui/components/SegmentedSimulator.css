@@ -1,0 +1,83 @@
+/* ===== SegmentedSimulator — Sovereign Adaptive System ===== */
+
+.segmented-sim-wrapper {
+  width: 100%;
+  padding: 8px 16px 4px 16px;
+  background: #F8FAFC;
+}
+
+.segmented-sim-bar {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  padding: 3px;
+  border-radius: 8px;
+  background: #F1F5F9;
+  border: 1px solid #E2E8F0;
+  gap: 2px;
+}
+
+.segmented-sim-item {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 6px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #64748B;
+  font-size: 11.5px;
+  font-weight: 600;
+  font-family: Inter, sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.segmented-sim-item:hover {
+  color: #0F172A;
+}
+
+.segmented-sim-item--active {
+  background: #FFFFFF;
+  color: #0F172A;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+  border: 1px solid #E2E8F0;
+  font-weight: 700;
+}
+
+.segmented-sim-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.segmented-sim-dot--5g {
+  background: #10B981;
+  box-shadow: 0 0 4px #10B981;
+}
+
+.segmented-sim-dot--2g {
+  background: #F59E0B;
+}
+
+.segmented-sim-dot--offline {
+  background: #6366F1;
+}
+
+.segmented-sim-dot--deadzone {
+  background: #EF4444;
+}
+
+@media (max-width: 440px) {
+  .segmented-sim-item {
+    font-size: 10.5px;
+    gap: 4px;
+    padding: 0 2px;
+  }
+}

@@ -1,0 +1,117 @@
+/* ===== Offline Guide Modal Styles ===== */
+
+.offline-modal__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.offline-modal__title-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.offline-modal__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--color-teal-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.offline-modal__title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.offline-modal__subtitle {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.offline-modal__close {
+  padding: 4px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.offline-modal__highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  background: #FEF3C7;
+  border: 1px solid #FCD34D;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+}
+
+.offline-modal__highlight strong {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: #92400E;
+}
+
+.offline-modal__highlight p {
+  font-size: 11px;
+  color: #78350F;
+  margin-top: 2px;
+}
+
+.offline-steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.offline-step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-sm) var(--space-md);
+}
+
+.offline-step__icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--color-teal-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.offline-step__info strong {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: var(--color-text);
+}
+
+.offline-step__info p {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+.offline-modal__security {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-xs);
+  background: var(--color-teal-50);
+  border: 1px solid var(--color-teal-200);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  color: var(--color-teal-900);
+}
