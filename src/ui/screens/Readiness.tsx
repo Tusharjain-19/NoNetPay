@@ -84,7 +84,7 @@ export const ReadinessScreen: React.FC = () => {
 
       {/* Checklist */}
       <div className="readiness__checklist stagger-item">
-        {readiness?.items.map((item) => (
+        {readiness?.items?.map((item) => (
           <div key={item.id} className="checklist__item" id={`check-${item.id}`}>
             <div className={`checklist__icon ${item.passed ? 'checklist__icon--pass' : 'checklist__icon--fail'}`}>
               {item.passed ? <CheckCircleIcon size={14} /> : <XCircleIcon size={14} />}

@@ -27,17 +27,17 @@ export const HomeScreen: React.FC = () => {
   const {
     readiness,
     setReadiness,
-    history,
-    balance,
+    history = [],
+    balance = null,
     lastPracticeAt,
-    setupComplete,
-    activeSession,
+    setupComplete = false,
+    activeSession = null,
     setActiveSession,
-    simulatedNetwork,
-    selectedBank,
+    simulatedNetwork = '5G',
+    selectedBank = null,
   } = useApp();
 
-  const [isOnline, setIsOnline] = useState(navigator.onLine);
+  const [isOnline, setIsOnline] = useState(typeof navigator !== 'undefined' ? navigator.onLine : true);
 
   const hasPendingSession = activeSession && !['SUCCESS', 'FAILED'].includes(activeSession.state);
 
@@ -53,17 +53,18 @@ export const HomeScreen: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    runReadinessCheck().then(setReadiness);
+    runReadinessCheck().then(setReadiness).catch(() => {});
   }, [setReadiness]);
 
   // Compute multi-rail telemetry status based on simulated edge network
   const telemetry = useMemo(() => {
-    switch (simulatedNetwork) {
+    const net = simulatedNetwork || (isOnline ? '5G' : 'OFFLINE');
+    switch (net) {
       case '5G':
         return {
           score: 100,
           label: 'Optimal Multi-Rail',
-          ipState: 'active', // active
+          ipState: 'active',
           volteState: 'active',
           voiceState: 'active',
           ussdState: 'active',
@@ -72,16 +73,7 @@ export const HomeScreen: React.FC = () => {
         return {
           score: 88,
           label: 'High Latency / Failover Ready',
-          ipState: 'warning', // high latency
-          volteState: 'active',
-          voiceState: 'active',
-          ussdState: 'active',
-        };
-      case 'OFFLINE':
-        return {
-          score: 94,
-          label: '94% Sovereign Offline Ready',
-          ipState: 'inactive', // no internet
+          ipState: 'warning',
           volteState: 'active',
           voiceState: 'active',
           ussdState: 'active',
@@ -95,12 +87,23 @@ export const HomeScreen: React.FC = () => {
           voiceState: 'inactive',
           ussdState: 'inactive',
         };
+      case 'OFFLINE':
+      default:
+        return {
+          score: 94,
+          label: '94% Sovereign Offline Ready',
+          ipState: 'inactive',
+          volteState: 'active',
+          voiceState: 'active',
+          ussdState: 'active',
+        };
     }
-  }, [simulatedNetwork]);
+  }, [simulatedNetwork, isOnline]);
 
-  const recentPayments = history.slice(0, 3);
+  const recentPayments = (history || []).slice(0, 3);
 
-  const formatTimeAgo = (ts: number) => {
+  const formatTimeAgo = (ts?: number) => {
+    if (!ts || isNaN(ts)) return 'recently';
     const diff = Date.now() - ts;
     const mins = Math.floor(diff / 60000);
     if (mins < 1) return 'just now';
